@@ -5,7 +5,7 @@ import mysql from 'mysql2';
 import cors from 'cors';
 
 const app = express();
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['http://localhost:5173'];
 const corsOptions = {
     origin: function (origin, callback) {
         if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
@@ -47,7 +47,7 @@ const httpserver = http.createServer(app);
 
 const io = new Server(httpserver, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'http://localhost:5173',
         methods: ['GET', 'POST'],
     },
 });

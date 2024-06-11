@@ -5,8 +5,9 @@ import io from 'socket.io-client';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import Delta from 'quill-delta';
 import toast from 'react-hot-toast';
-import Client from '../components/Client';
+import Client from './Client'
 import QuillCursors from 'quill-cursors';
+import Company_logo from '../assets/Company_logo.jpg'
 
 Quill.register('modules/cursors', QuillCursors);
 
@@ -43,7 +44,7 @@ const EditorPage = () => {
       hideDelayMs: 500, 
       hideSpeedMs: 300,
       selectionChangeSource: null,
-      transformOnTextChange: true
+      transformOnTextChange: true,
       
   },
     toolbar: [
@@ -278,7 +279,7 @@ const EditorPage = () => {
               <div className="logo">
                   <img
                       className="logoImage"
-                      src="/code-sync_1.png"
+                      src={Company_logo}
                       alt="logo"
                   />
               </div>

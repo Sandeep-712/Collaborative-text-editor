@@ -1,10 +1,11 @@
 import Avatar from 'react-avatar'
 
-const Client = ({ username , isCurrentuser }) => {
+// eslint-disable-next-line react/prop-types
+const Client = ({ username, isCurrentUser }) => {
     return (
         <div className="client">
-            <Avatar name={isCurrentuser ? "Me" : username} size="50" round='15px' />
-            <span className='userName'>{isCurrentuser ? 'Me' : username}</span>
+            <Avatar name={isCurrentUser ? 'ME' : username} size={50} round="14px" />
+            <span className="userName">{isCurrentUser ? `Me(${username})` : username}</span>
         </div>
     )
 }

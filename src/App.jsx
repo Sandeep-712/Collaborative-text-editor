@@ -8,7 +8,13 @@ function App() {
   return (
     <>
       <div>
-        <Toaster position='top-center' reverseOrder={false}></Toaster>
+        <Toaster position='top-center' reverseOrder={false} toastOptions={{
+          success:{
+            theme:{
+              primary:'#4aed88',
+            }
+          }
+        }}></Toaster>
       </div>
       <Router>
         <Routes>
